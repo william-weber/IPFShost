@@ -1,0 +1,18 @@
+.App {
+  background: rgb(4,6,22);
+  background: linear-gradient(0deg, rgba(4,6,22,1) 0%, rgba(2,4,66,1) 35%, rgba(46,82,162,1) 85%, rgba(131,75,210,1) 100%);
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-body {
+  background-color: #131313;;
+  min-height: 100vh;
+}
+
