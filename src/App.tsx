@@ -2,6 +2,7 @@ import './App.css'
 import ConnectWalletButton from './components/ConnectWalletButton'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Upload from './pages/Upload'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/upload" element={<Upload />} />
           </Routes>
         </BrowserRouter>
       </div>
