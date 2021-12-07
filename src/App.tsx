@@ -1,17 +1,9 @@
 import './App.css'
-import { useState } from 'react'
 import ConnectWalletButton from './components/ConnectWalletButton'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 
 function App() {
-  const [page, setPage] = useState('home')
-
-  function currentPage() {
-    if (page === 'home') {
-      return <Home goToUpload={() => setPage('upload')} />
-    }
-  }
-
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +11,11 @@ function App() {
           <ConnectWalletButton />
       </header>
       <div className="App-body">
-        {currentPage()}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </div>
   )
